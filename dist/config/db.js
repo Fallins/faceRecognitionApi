@@ -13,10 +13,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var db = (0, _knex2.default)({
   client: 'pg',
   connection: {
-    host: '127.0.0.1',
-    user: 'postgres',
-    password: '1234',
-    database: 'face-recognition'
+    // host : '127.0.0.1',
+    // user : 'postgres',
+    // password : '1234',
+    // database : 'face-recognition'
+    host: process.env.DATABASE_URL || '127.0.0.1',
+    ssl: true
   }
 });
 
