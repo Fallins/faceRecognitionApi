@@ -7,7 +7,7 @@ const db = knex({
       // user : 'postgres',
       // password : '1234',
       // database : 'face-recognition'
-      host: process.env.DATABASE_URL || '127.0.0.1',
+      connectionString: process.env.DATABASE_URL || '127.0.0.1',
       ssl: true
     }
 })
